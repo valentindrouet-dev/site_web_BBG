@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Big Budi Games</title>
+  <meta name="description" content="Contacter Big Budi Games." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html" aria-label="Big Budi Games - Accueil">
+      <img class="brand__logo" src="assets/logo.png" alt="Big Budi Games" />
+    </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="jeux.html">Jeux</a>
+      <a href="blog.html">Blog</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a class="btn active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container">
+    <p class="kicker">Contact</p>
+    <h1>Nous écrire</h1>
+    <div class="card">
+      <form action="https://formspree.io/f/mojnqwln" method="POST">
+        <p>
+          <label for="name">Nom :</label><br>
+          <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;">
+        </p>
+        <p>
+          <label for="email">Email :</label><br>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;">
+        </p>
+        <p>
+          <label for="subject">Sujet :</label><br>
+          <select id="subject" name="subject" required style="width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;">
+            <option value="">-- Sélectionnez un sujet --</option>
+            <option value="Partenariats">Partenariats</option>
+            <option value="Distribution">Distribution</option>
+            <option value="Presse">Presse</option>
+            <option value="Festivals">Festivals</option>
+            <option value="Proposition de jeu">Proposition de jeu</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </p>
+        <p>
+          <label for="message">Message :</label><br>
+          <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;"></textarea>
+        </p>
+        <p>
+          <button type="submit" class="btn" style="cursor: pointer;">Envoyer</button>
+        </p>
+      </form>
+      <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+      <p style="font-size: 0.9em; color: #666;">
+        Vous pouvez aussi nous contacter directement par email :<br>
+        Questions générales : <strong><a href="mailto:valentin.drouet@bigbudigames.fr">valentin.drouet@bigbudigames.fr</a></strong><br>
+        Propositions de jeux : <strong><a href="mailto:proto@bigbudigames.fr">proto@bigbudigames.fr</a></strong>
+      </p>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Big Budi Games</span>
+    <span class="footer__links">
+      <a href="contact.html">Contact</a>
+      <a href="sourcing.html">Sourcing</a>
+    </span>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        var open = nav.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+  </script>
+</body>
+</html>

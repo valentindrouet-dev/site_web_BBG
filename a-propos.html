@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos — Big Budi Games</title>
+  <meta name="description" content="Big Budi Games, maison d'édition de jeux de société." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-block {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .about-logo {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .about-block .card {
+      flex: 1;
+      min-width: 300px;
+    }
+    @media (max-width: 768px) {
+      .about-logo {
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html" aria-label="Big Budi Games - Accueil">
+      <img class="brand__logo" src="assets/logo.png" alt="Big Budi Games" />
+    </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="jeux.html">Jeux</a>
+      <a href="blog.html">Blog</a>
+      <a class="active" href="a-propos.html">À propos</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a class="btn" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="container">
+    <p class="kicker">À propos</p>
+    <h1>Big Budi Games</h1>
+    <!-- NOUVEAU CONTENEUR -->
+    <div class="about-block">
+      <img class="about-logo" src="assets/budiright.png" alt="Big Budi" />
+      <div class="card">
+        <p>
+          Big Budi Games est une maison d'édition de jeux de société fondée en 2025 au nord de Montpellier,
+          avec l'envie de proposer des expériences de jeu modernes, accessibles et soignées.
+        </p>
+        <p>
+          Notre ambition : des jeux de société familiaux, rythmés, et qui déclenchent une immédiate envie de rejouer !
+        </p>
+        <p class="micro">
+		  Contact : <a href="mailto:valentin.drouet@bigbudigames.fr"><b>valentin.drouet@bigbudigames.fr</b></a>
+        </p>
+      </div>
+    </div>
+    <!-- FIN -->
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Big Budi Games</span>
+    <span class="footer__links">
+      <a href="contact.html">Contact</a>
+      <a href="sourcing.html">Sourcing</a>
+    </span>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        var open = nav.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+  </script>
+</body>
+</html>
