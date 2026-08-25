@@ -20,6 +20,11 @@
     .stat { background:#FBB938; color:#3b2a00; border-radius:12px; padding:10px 16px; font-weight:900; font-size:15px; }
     .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
     .photo-slot { background:rgba(255,255,255,.45); border:2px dashed rgba(43,26,18,.2); border-radius:14px; height:180px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:rgba(43,26,18,.4); text-align:center; padding:12px; }
+    .duo { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:24px 0 8px; }
+    .duo figure { margin:0; }
+    .duo img { width:100%; height:260px; object-fit:cover; border-radius:14px; display:block; }
+    .duo figcaption { font-size:13px; font-weight:700; color:var(--muted); margin-top:8px; }
+    @media(max-width:720px){ .duo{ grid-template-columns:1fr; } .duo img{ height:220px; } }
     .back-link { display:inline-flex; align-items:center; gap:6px; font-weight:800; color:var(--accent2); margin-bottom:24px; font-size:14px; }
     .back-link:hover { text-decoration:none; opacity:.8; }
     @media(max-width:920px){ .photo-grid{ grid-template-columns:1fr 1fr; } .stat-row{ gap:8px; } }
@@ -49,13 +54,9 @@
     <div class="container">
       <div><a class="back-link" href="../blog.html">← Retour aux news</a></div>
 
-      <img class="article-hero" src="../assets/blog/signatures.jpg"
-           alt="Signature des contrats d&rsquo;édition Camino et Tornadice"
-           onerror="this.style.display='none';" />
-
       <div class="bubble__tag">Édition</div>
       <h1 style="margin-top:12px;">2 signatures de jeu !</h1>
-      <p class="article-meta">Deux contrats d&rsquo;édition signés · <strong>Camino</strong> et <strong>Tornadice</strong></p>
+      <p class="article-meta">Deux contrats d&rsquo;édition signés · <strong>Camino</strong> le 23 juillet 2026, <strong>Tornadice</strong> le lendemain</p>
 
       <div class="stat-row">
         <div class="stat">2 contrats signés</div>
@@ -66,7 +67,7 @@
       <div class="article-section">
         <p>
           Il y a un moment où une maison d&rsquo;édition cesse d&rsquo;être un projet pour devenir une réalité :
-          celui où l&rsquo;on pose sa signature au bas d&rsquo;un contrat d&rsquo;édition. Nous venons d&rsquo;en signer
+          celui où l&rsquo;on pose sa signature au bas d&rsquo;un contrat d&rsquo;édition. Cet été, nous en avons signé
           deux. <strong>Camino</strong> et <strong>Tornadice</strong> rejoignent officiellement le catalogue
           Big Budi Games.
         </p>
@@ -75,6 +76,19 @@
           Cannes à Toulouse en passant par Montpellier, Valence et Avignon — ces deux signatures marquent le
           passage à la suite : le travail d&rsquo;édition proprement dit.
         </p>
+      </div>
+
+      <div class="duo">
+        <figure>
+          <img src="../assets/blog/signature-camino.jpg"
+               alt="Signature du contrat d&rsquo;édition de Camino, autour d&rsquo;une table en extérieur" />
+          <figcaption>Camino — 23 juillet 2026</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/blog/signature-tornadice.jpg"
+               alt="Signature du contrat d&rsquo;édition de Tornadice, en visioconférence" />
+          <figcaption>Tornadice — 24 juillet 2026</figcaption>
+        </figure>
       </div>
 
       <div class="article-section">
@@ -100,10 +114,11 @@
       <div class="article-section">
         <h2>Deux signatures, deux ambiances</h2>
         <p>
-          Aucune des deux ne s&rsquo;est déroulée dans une salle de réunion. La première s&rsquo;est jouée
+          Aucune des deux ne s&rsquo;est déroulée dans une salle de réunion. Le 23 juillet, ça s&rsquo;est joué
           dehors, autour d&rsquo;une table de pique-nique sous les pins, l&rsquo;ordinateur posé entre les
           verres pour que celles et ceux qui ne pouvaient pas être là physiquement soient quand même de la
-          fête. La seconde s&rsquo;est faite à distance, en visio, contrat en main devant l&rsquo;écran.
+          fête. Le lendemain, rebelote pour Tornadice, cette fois entièrement à distance : la visio d&rsquo;un
+          côté de l&rsquo;écran, le contrat de l&rsquo;autre.
         </p>
         <p>
           C&rsquo;est assez représentatif de la façon dont on travaille : peu de formalisme, beaucoup
@@ -111,16 +126,6 @@
           auteur.ices qui nous font confiance pour porter leur jeu.
         </p>
 
-        <div class="photo-grid" style="grid-template-columns:repeat(2,1fr);">
-          <img src="../assets/blog/signatures.jpg"
-               alt="Signature du contrat d&rsquo;édition autour d&rsquo;une table, en extérieur"
-               style="width:100%; height:100%; object-fit:cover; border-radius:14px;"
-               onerror="this.style.display='none';" />
-          <img src="../assets/blog/signatures-2.jpg"
-               alt="Signature du second contrat d&rsquo;édition en visioconférence"
-               style="width:100%; height:100%; object-fit:cover; border-radius:14px;"
-               onerror="this.style.display='none';" />
-        </div>
       </div>
 
       <div class="article-section">
