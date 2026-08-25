@@ -48,3 +48,25 @@ vient du **zoom du navigateur**, que Chrome mémorise par domaine :
 **Ctrl+0** sur chaque onglet remet tout à 100 %. Le contenu fait 1200 px
 de large au maximum et reste centré — élargir la fenêtre n'agrandit pas
 le site, ça ajoute du fond sur les côtés.
+
+## Articles à écrire
+
+Ces vignettes ont été retirées de la page News le 25 août 2026 : elles
+annonçaient des articles qui n'existaient pas, et menaient à une page
+d'erreur. Les visuels sont toujours dans `assets/blog/`. Chaque vignette
+se réinstalle en quelques minutes, une fois le texte écrit.
+
+| Article | Visuel disponible |
+|---|---|
+| Avignon 2026 | `assets/blog/avignon26.png` |
+| Sortons Jouer 2026 (Montpellier) | `assets/blog/montpellier26.png` |
+| Valence Joue 2026 | `assets/blog/valence26.png` |
+| Festival JAL | `assets/blog/jal.png` |
+| Festival Octogônes | `assets/blog/octogones.png` |
+| 1ère visite à Vichy | `assets/blog/vichy.png` |
+| Début de la communication | aucun |
+| Créer Big Budi Games | aucun |
+
+L'onglet s'appelle **News**, mais le fichier reste `blog.html` et les
+articles restent dans `blog/` : renommer les fichiers casserait les liens
+déjà partagés et le référencement Google.
