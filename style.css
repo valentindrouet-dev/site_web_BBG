@@ -479,6 +479,33 @@ h1{
   color: var(--muted);
 }
 
+.news-date{
+  font-size:12px;
+  font-weight:700;
+  color: rgba(43,26,18,.55);
+  white-space:nowrap;
+}
+
+.post-bubble__foot,
+.bubble__foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+/* Bulle d'accueil entièrement cliquable */
+.bubble__wrap{
+  display:block;
+  color:inherit;
+}
+.bubble__wrap:hover{ text-decoration:none; }
+.bubble__wrap .bubble__media{ overflow:hidden; }
+.bubble__wrap .bubble__media img{ transition: transform .25s ease; }
+.bubble__wrap:hover .bubble__media img{ transform: scale(1.04); }
+.bubble__wrap:hover .bubble__link{ text-decoration:underline; }
+
 .post-bubble__meta{
   display:inline-block;
   font-weight:700;
