@@ -363,6 +363,12 @@ h1{
   border: 1px solid rgba(59,42,0,.12);
 }
 
+.badge--signe{
+  background: rgba(240,122,26,.16);
+  color: #a34a00;
+  border-color: rgba(240,122,26,.38);
+}
+
 .game-card__body{
   display:grid;
   grid-template-columns: 320px 1fr;
