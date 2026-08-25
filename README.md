@@ -2,20 +2,32 @@
 
 Copie de travail du site **bigbudigames.fr**, hébergé chez Infomaniak.
 
-Ce dépôt est l'**atelier** : c'est ici qu'on prépare les modifications.
-Infomaniak reste la **vitrine** : c'est ce que le public voit.
+- **Ce dépôt** = l'atelier. On y prépare les modifications.
+- **GitHub Pages** = l'aperçu. Pour voir avant de publier.
+- **Infomaniak** = la vitrine. Ce que le public voit.
+
+## La procédure, en 4 temps
+
+1. **Demander** — décrire la modification en français courant.
+2. **Modifier** — les fichiers sont édités ici et poussés sur GitHub.
+3. **Regarder** — rafraîchir la page GitHub Pages, ~1 minute après.
+   Rien n'est en ligne à ce stade : on peut recommencer autant de fois
+   qu'il faut.
+4. **Publier** — les fichiers modifiés sont envoyés dans la conversation.
+   Les glisser dans le Web FTP Infomaniak par-dessus les anciens, puis
+   **Ctrl+F5** sur bigbudigames.fr pour forcer l'affichage à jour.
 
 ## Où sont les fichiers
 
-Le contenu de ce dépôt reproduit exactement le dossier
-`/home/clients/<identifiant>/sites/bigbudigames.fr/` du Web FTP Infomaniak.
+Le dépôt reproduit exactement le dossier
+`/home/clients/<identifiant>/sites/bigbudigames.fr/` du Web FTP.
 Un fichier ici = le même fichier là-bas, au même endroit.
 
 ```
 index.html          page d'accueil
 jeux.html           les jeux
-catalogue.html      catalogue
-boutique.html       boutique
+catalogue.html      redirige vers jeux.html
+boutique.html       redirige vers jeux.html
 blog.html + blog/   le blog et ses articles
 a-propos.html       à propos
 contact.html        contact
@@ -26,24 +38,13 @@ robots.txt          instructions pour les moteurs de recherche
 sitemap.xml         plan du site pour les moteurs de recherche
 ```
 
-## Comment se passe une mise à jour
-
-1. Vous demandez la modification (texte, image, couleur, nouvelle section…).
-2. La modification est faite ici, dans ce dépôt, et enregistrée avec un
-   commentaire décrivant ce qui a changé.
-3. Vous recevez la liste exacte des fichiers modifiés.
-4. Vous ouvrez le Web FTP Infomaniak et vous y glissez ces fichiers : ils
-   remplacent les anciens. Le site public est à jour.
-
-Chaque étape 2 est conservée dans l'historique du dépôt : on peut revenir à
+Chaque modification est conservée dans l'historique : on peut revenir à
 n'importe quelle version antérieure du site, à tout moment.
 
-## Bon à savoir
+## Comparer l'aperçu et le site en ligne
 
-- **Rien n'est mis en ligne automatiquement.** Tant que vous n'avez pas
-  recopié les fichiers chez Infomaniak, le site public reste inchangé.
-- **Vider le cache du navigateur** (Ctrl+F5, ou Cmd+Maj+R sur Mac) après une
-  mise en ligne : sans ça, votre navigateur peut continuer d'afficher
-  l'ancienne version pendant quelques minutes.
-- Une synchronisation automatique de ce dépôt vers Infomaniak est possible
-  plus tard, si le glisser-déposer devient fastidieux.
+Les deux servent les mêmes fichiers. Une différence de taille à l'écran
+vient du **zoom du navigateur**, que Chrome mémorise par domaine :
+**Ctrl+0** sur chaque onglet remet tout à 100 %. Le contenu fait 1200 px
+de large au maximum et reste centré — élargir la fenêtre n'agrandit pas
+le site, ça ajoute du fond sur les côtés.
