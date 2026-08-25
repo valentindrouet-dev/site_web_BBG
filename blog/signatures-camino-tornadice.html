@@ -16,8 +16,6 @@
     .day-block { background:rgba(255,255,255,.55); border:1px solid rgba(43,26,18,.10); border-radius:14px; padding:18px 20px; margin-bottom:16px; }
     .day-block h3 { margin:0 0 10px; font-size:16px; color:var(--ink); }
     .day-block p { margin:0; font-size:15px; }
-    .stat-row { display:flex; gap:12px; flex-wrap:wrap; margin:20px 0; }
-    .stat { background:#FBB938; color:#3b2a00; border-radius:12px; padding:10px 16px; font-weight:900; font-size:15px; }
     .photo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px; }
     .photo-slot { background:rgba(255,255,255,.45); border:2px dashed rgba(43,26,18,.2); border-radius:14px; height:180px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:rgba(43,26,18,.4); text-align:center; padding:12px; }
     .duo { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:24px 0 8px; }
@@ -27,7 +25,7 @@
     @media(max-width:720px){ .duo{ grid-template-columns:1fr; } .duo img{ height:220px; } }
     .back-link { display:inline-flex; align-items:center; gap:6px; font-weight:800; color:var(--accent2); margin-bottom:24px; font-size:14px; }
     .back-link:hover { text-decoration:none; opacity:.8; }
-    @media(max-width:920px){ .photo-grid{ grid-template-columns:1fr 1fr; } .stat-row{ gap:8px; } }
+    @media(max-width:920px){ .photo-grid{ grid-template-columns:1fr 1fr; } }
   </style>
 </head>
 <body>
@@ -58,11 +56,6 @@
       <h1 style="margin-top:12px;">2 signatures de jeu !</h1>
       <p class="article-meta">Deux contrats d&rsquo;édition signés · <strong>Camino</strong> le 23 juillet 2026, <strong>Tornadice</strong> le lendemain</p>
 
-      <div class="stat-row">
-        <div class="stat">2 contrats signés</div>
-        <div class="stat">2 jeux au catalogue</div>
-        <div class="stat">Big Budi Games devient éditeur</div>
-      </div>
 
       <div class="article-section">
         <p>
