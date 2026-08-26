@@ -395,11 +395,6 @@ h1{
   font-size: 22px;
 }
 
-.game-subtitle{
-  margin: 2px 0 0;
-  font-size: 14px;
-  color: rgba(43,26,18,.65);
-}
 
 .badge{
   font-weight: 900;
@@ -439,6 +434,39 @@ h1{
 .game-info p{
   margin: 0 0 12px;
   color: var(--muted);
+}
+
+.game-credits{
+  list-style:none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.game-credits li{
+  display:grid;
+  grid-template-columns: 132px 1fr;
+  gap: 10px;
+  font-size: 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(43,26,18,.09);
+}
+
+.game-credits li:last-child{ border-bottom: none; }
+
+.game-credits span{
+  min-width: 132px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: rgba(43,26,18,.55);
+  padding-top: 2px;
+}
+
+.game-credits strong{ font-weight: 700; }
+
+@media (max-width: 560px){
+  .game-credits li{ grid-template-columns: 1fr; gap: 2px; }
 }
 
 .game-meta{
