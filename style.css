@@ -219,8 +219,8 @@ h1{
   object-fit: cover;
 }
 
-/* Visuel dont le haut porte l'information : on rogne par le bas */
-.bubble__media img.is-top{ object-position: top; }
+/* Visuel plus haut que large : l'emplacement s'allonge pour ne pas le rogner */
+.bubble__media--tall img{ height: 210px; }
 
 .bubble--featured .bubble__media img{
   height:170px;
