@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Big Budi Games — Édition de jeux de société</title>
   <meta name="description" content="Big Budi Games, maison d’édition de jeux de société. Sourcing ouvert : proto@bigbudigames.fr" />
-  <link rel="stylesheet" href="style.css?v=2026100911" />
+  <link rel="stylesheet" href="style.css?v=2026100913" />
   <script>if ('IntersectionObserver' in window) document.documentElement.classList.add('js-reveal');</script>
 </head>
 
@@ -38,7 +38,6 @@
     <section class="hero">
       <div class="container hero__texte">
         <img class="hero__logo reveal" src="assets/bbglogo.png" alt="Big Budi Games" />
-        <p class="kicker reveal">Maison d’édition de jeux de société</p>
 
         <h1 class="slogan">
           <span class="slogan__l reveal">Installez-vous</span>
@@ -52,17 +51,14 @@
         </p>
 
         <div class="cta hero__cta reveal">
-          <a class="btn" href="sourcing.html">Proposer un jeu</a>
-          <a class="btn btn--ghost" href="a-propos.html">Découvrir l’éditeur</a>
+          <a class="btn btn--grand" href="jeux.html">Nos jeux</a>
+          <div class="hero__cta-rang">
+            <a class="btn btn--ghost" href="a-propos.html">Découvrir l’éditeur</a>
+            <a class="btn btn--ghost" href="sourcing.html">Proposer un jeu</a>
+          </div>
         </div>
       </div>
 
-      <!-- Le socle du kakemono : deux reliefs, et Budi qui lève les yeux vers le slogan -->
-      <div class="hero__sol" aria-hidden="true">
-        <img class="hero__relief hero__relief--clair" src="assets/montagne-claire.webp" alt="" />
-        <img class="hero__relief hero__relief--ambre" src="assets/montagne-ambre.webp" alt="" />
-        <img class="hero__budi" src="assets/budi.webp" alt="" />
-      </div>
     </section>
 
     <section class="actus section--jaune" aria-labelledby="actus-titre">
@@ -177,7 +173,7 @@
           if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-      document.querySelectorAll('.reveal, .hero__sol').forEach(function (el) { io.observe(el); });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     }
   </script>
 </body>
