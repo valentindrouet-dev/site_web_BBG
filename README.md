@@ -32,6 +32,21 @@ disloquée. C'est arrivé le 9 octobre 2026.
 huit pages. Sinon, le symptôme revient — et Ctrl+F5 ne soigne que le
 poste depuis lequel on regarde, pas celui des visiteurs.
 
+## La charte graphique dans la feuille de style
+
+Toutes les couleurs sont des variables en tête de `style.css`, nommées comme
+dans la charte d'AMMA Studio (`--jaune`, `--creme`, `--brun`, `--orange`…).
+Pour changer une teinte partout, c'est là, et seulement là.
+
+Les formes « posées à la main » (bandeau des boutons, cadres décalés) sont
+des découpes CSS, pas des images : elles se recolorent librement.
+Le dossier `assets/charte/` contient les pictogrammes tirés de la charte
+(banane et pièce, bulle à chiffre, flèche, contours blancs) et la tuile du
+motif de fond.
+
+Polices : Lilita One pour tout ce qui est en capitales, Baloo 2 pour le texte.
+Servies par le site depuis `assets/fonts/`, sans appel à Google.
+
 ## Où sont les fichiers
 
 Le dépôt reproduit exactement le dossier
