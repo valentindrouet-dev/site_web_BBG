@@ -17,6 +17,21 @@ Copie de travail du site **bigbudigames.fr**, hébergé chez Infomaniak.
    Les glisser dans le Web FTP Infomaniak par-dessus les anciens, puis
    **Ctrl+F5** sur bigbudigames.fr pour forcer l'affichage à jour.
 
+## Le cache du navigateur — à savoir avant de publier
+
+Les pages portent `style.css?v=AAAAMMJJ`. Ce suffixe n'a qu'un rôle :
+quand la feuille de style change, le numéro change aussi, l'adresse n'est
+plus la même et les navigateurs vont chercher la nouvelle version au lieu
+de ressortir celle qu'ils gardaient en mémoire.
+
+**Sans lui**, un visiteur déjà venu voit les nouvelles pages avec
+l'ancienne mise en forme : images à leur taille d'origine, mise en page
+disloquée. C'est arrivé le 9 octobre 2026.
+
+À chaque modification de `style.css`, le numéro doit être relevé dans les
+huit pages. Sinon, le symptôme revient — et Ctrl+F5 ne soigne que le
+poste depuis lequel on regarde, pas celui des visiteurs.
+
 ## Où sont les fichiers
 
 Le dépôt reproduit exactement le dossier
