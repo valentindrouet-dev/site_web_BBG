@@ -19,7 +19,7 @@ Copie de travail du site **bigbudigames.fr**, hébergé chez Infomaniak.
 
 ## Le cache du navigateur — à savoir avant de publier
 
-Les pages portent `style.css?v=AAAAMMJJ`. Ce suffixe n'a qu'un rôle :
+Les pages portent `style.css?v=AAAAMMJJNN` (date + numéro du jour). Ce suffixe n'a qu'un rôle :
 quand la feuille de style change, le numéro change aussi, l'adresse n'est
 plus la même et les navigateurs vont chercher la nouvelle version au lieu
 de ressortir celle qu'ils gardaient en mémoire.
