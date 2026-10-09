@@ -908,3 +908,53 @@ a:hover{ text-decoration: underline; }
   font-family: 'Lilita One', 'Baloo 2', system-ui, sans-serif;
   font-weight: 400;
 }
+
+
+/* ---------------------------------------------------------------------------
+   Paysage de bas de page — les deux reliefs et Budi, comme au pied du kakemono.
+   Le conteneur rogne : les formes débordent par le bas, Budi s'y coupe.
+   Purement décoratif, donc aria-hidden et insensible au clic.
+   --------------------------------------------------------------------------- */
+.paysage{
+  position: relative;
+  height: clamp(110px, 14vw, 186px);
+  margin-top: 8px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.paysage img{
+  position: absolute;
+  bottom: 0;
+  display: block;
+}
+
+/* Les deux formes ont déjà leur pointe sur leur bord haut : les faire tourner
+   l'éloigne et ne laisse qu'une arête plate. On les garde donc presque droites
+   et c'est l'enfoncement qui décide de ce qui dépasse.
+   translateY est écrit en premier pour s'appliquer dans les axes du parent. */
+.paysage__relief--a{
+  left: -6%;
+  width: clamp(230px, 28vw, 380px);
+  transform: translateY(50%) rotate(-5deg);
+}
+
+.paysage__relief--b{
+  left: 31%;
+  width: clamp(160px, 20vw, 265px);
+  transform: translateY(60%) rotate(7deg);
+}
+
+/* l'apex de cette forme est à 79 % de sa largeur : décalée à droite, il sortait
+   du cadre et il ne restait qu'une arête plate. */
+.paysage__relief--c{
+  right: 6%;
+  width: clamp(235px, 29vw, 400px);
+  transform: translateY(46%) rotate(5deg);
+}
+
+.paysage__budi{
+  right: clamp(24px, 8vw, 108px);
+  width: clamp(100px, 13vw, 158px);
+  transform: translateY(4%);
+}
