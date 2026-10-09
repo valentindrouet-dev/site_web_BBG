@@ -184,6 +184,32 @@ h1{
   color: rgba(43,26,18,.7);
 }
 
+/* ----- Slogan de marque (repris du kakemono) ----- */
+.slogan{
+  margin: 2px 0 16px;
+  font-weight: 900;
+  font-size: clamp(30px, 4.6vw, 50px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #522216;
+}
+
+.slogan span{ display:block; }
+
+/* plus spécifique que la règle ci-dessus, sinon le bandeau s'étire */
+.slogan .slogan__band{
+  display: inline-block;
+  font-size: 1.3em;
+  background: #EB6526;
+  color: #FFF6E5;
+  padding: 0.04em 0.44em 0.1em;
+  border-radius: 8px;
+  transform: rotate(-2.2deg);
+  margin: 0.06em 0 0.08em;
+  box-shadow: 0 5px 12px rgba(235,101,38,.2);
+}
+
 /* ----- Réseaux sociaux (accueil) ----- */
 .social{
   margin-top: 26px;
