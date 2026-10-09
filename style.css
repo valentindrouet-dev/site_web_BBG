@@ -978,11 +978,14 @@ a:hover{ text-decoration: underline; }
   .hero__lead{ margin: 0 0 24px; }
   .hero__cta{ justify-content: flex-start; }
 
+  /* Le socle s'aligne sur le bord droit de la colonne de contenu (1200 px,
+     marge de 20 px), et non sur celui de l'écran : accroché à l'écran, il
+     s'éloignait du texte à mesure que la fenêtre s'élargissait. */
   .hero__sol{
     position: absolute;
-    right: 3%;
+    right: calc(max(0px, (100% - var(--max)) / 2) + 20px);
     bottom: 0;
-    width: min(44%, 600px);
+    width: min(42%, 560px);
     margin: 0;
   }
   /* reliefs resserrés : à la largeur du mobile, le clair passait sous l'accroche */
@@ -1105,3 +1108,15 @@ a:hover{ text-decoration: underline; }
   font-weight: 700;
 }
 .actus .bubble--appel .bubble__link:hover{ text-decoration: none; background: #fff; }
+
+
+/* Pied de page sur petit écran : les trois blocs s'empilent, centrés, au lieu
+   de se disputer une seule ligne. */
+@media (max-width: 680px){
+  .footer__inner{
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+  .footer__links{ display: flex; gap: 18px; justify-content: center; }
+}
