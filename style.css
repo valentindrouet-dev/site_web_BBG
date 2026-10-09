@@ -435,3 +435,75 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   main.page{ padding-top: 86px; }
   .hero{ padding-top: 72px; }
 }
+
+
+/* ===========================================================================
+   Vignettes d'actualité : posées de biais, comme les bandeaux.
+   L'enveloppe .vignette porte l'inclinaison et l'ombre (drop-shadow suit la
+   silhouette) ; la carte porte la découpe — mettre les deux sur le même élément
+   ferait disparaître l'ombre, le découpage s'appliquant après le filtre.
+   Au survol, la carte se redresse.
+   =========================================================================== */
+:root{
+  --forme-carte:   polygon(0% 2.2%, 98.8% 0%, 100% 97.6%, 1.4% 100%);
+  --forme-carte-2: polygon(1.2% 0%, 100% 1.8%, 98.6% 100%, 0% 98%);
+}
+.vignette{
+  display:flex;
+  flex-direction:column;
+  filter: drop-shadow(0 10px 16px rgba(81,34,22,.16));
+  rotate: -1.4deg;
+  transition: rotate .25s ease;
+}
+.vignette:nth-child(even){ rotate: 1.3deg; }
+.vignette:hover{ rotate: 0deg; }
+.vignette .bubble, .vignette .post-bubble{ flex:1; border-radius:0; box-shadow:none; clip-path: var(--forme-carte); }
+.vignette:nth-child(even) .bubble, .vignette:nth-child(even) .post-bubble{ clip-path: var(--forme-carte-2); }
+
+/* ===========================================================================
+   Accueil sur ordinateur : le texte à gauche, les actualités à droite dans
+   un panneau jaune légèrement de biais ; les réseaux sous les boutons.
+   Sur mobile, .accueil n'est qu'une pile : hero, actualités, réseaux.
+   =========================================================================== */
+.accueil{ display:flex; flex-direction:column; }
+.reseaux{ padding-bottom: 10px; }
+
+@media (min-width: 1100px){
+  .accueil{
+    display:grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 48px;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: start;
+  }
+  .accueil .hero{ grid-column:1; grid-row:1; overflow:visible; text-align:left; padding: 6px 0 8px; }
+  .accueil .reseaux{ grid-column:1; grid-row:2; }
+  .accueil .actus{
+    grid-column:2; grid-row: 1 / span 2;
+    margin-top: 18px;
+    padding: 30px 30px 36px;
+    clip-path: polygon(3% 0%, 100% .8%, 98.4% 100%, 0% 99%);
+  }
+  .accueil .actus .container{ padding:0; max-width:none; }
+  .accueil .actus__titre{ margin-bottom: 18px; }
+  .accueil .actus__grille{ grid-template-columns: 1fr; gap: 22px; }
+  .accueil .bubble__media img{ height: 150px; }
+  .accueil .bubble__media--tall img{ height: 190px; }
+
+  .accueil .hero__texte{ max-width:none; padding:0; margin:0; }
+  .accueil .hero__logo{ margin: 0 0 14px; }
+  .accueil .hero__lead{ margin: 0 0 24px; max-width: 34em; }
+  .accueil .hero__cta{ align-items:flex-start; }
+  .accueil .hero__cta-rang{ justify-content:flex-start; }
+  .accueil .slogan{ font-size: clamp(44px, 4.2vw, 62px); margin: 26px 0 28px; }
+  /* chaque ligne pivote depuis la marge gauche : les trois restent alignées sur la colonne */
+  .accueil .slogan__l{ width:fit-content; transform-origin:left center; }
+  .accueil .slogan .slogan__band{ margin: .24em 0 .28em -.12em; }
+
+  .accueil .reseaux .social{ text-align:left; margin-top: 8px; padding-top: 28px; }
+  .accueil .reseaux .social__text{ margin-left:0; }
+  .accueil .reseaux .social__links{ justify-content:flex-start; }
+}
