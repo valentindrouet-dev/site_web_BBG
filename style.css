@@ -555,3 +555,25 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 @media (max-width: 860px){
   .fiche-jeu__corps{ grid-template-columns: 1fr; gap: 26px; }
 }
+
+/* Avertissement « titres de travail » (page Jeux) : un petit mot posé de biais,
+   comme les vignettes, avec le trait orange de la charte pour l'accroche. */
+.note-titres{
+  max-width: 640px;
+  margin: 4px 0 8px;
+  padding: 14px 18px 14px 20px;
+  background: #FFFBF2;
+  border-left: 6px solid var(--orange);
+  border-radius: 6px 14px 14px 6px;
+  box-shadow: 0 6px 18px rgba(81,34,22,.10);
+  font-size: 16px;
+  rotate: -.6deg;
+}
+.note-titres strong:first-child{
+  font-family: var(--titre);
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-right: 4px;
+}
