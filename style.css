@@ -507,3 +507,51 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .accueil .reseaux .social__text{ margin-left:0; }
   .accueil .reseaux .social__links{ justify-content:flex-start; }
 }
+
+
+/* ===========================================================================
+   Jeux : vignettes du catalogue et fiche de chaque jeu.
+   Faute de visuels, chaque jeu a sa « couverture » : un aplat de la charte, le
+   motif en retenue, et le nom du jeu incliné de 7° comme le slogan de l'accueil.
+   =========================================================================== */
+.jeux-grille{ margin-top: 30px; }
+.jeu-visuel{
+  display:flex; align-items:center; justify-content:center;
+  height: 200px;
+  overflow:hidden;
+  background: var(--fond-jeu) url('assets/charte/motif.webp') center / 300px repeat;
+  color: var(--titre-jeu);
+}
+.jeu-visuel h1, .jeu-visuel h2{
+  margin:0;
+  font-size: clamp(42px, 5vw, 60px);
+  color: inherit;
+  rotate: -7deg;
+  text-shadow: 0 4px 0 rgba(55,22,13,.22);
+  transition: rotate .25s ease, scale .25s ease;
+}
+.post-bubble__link:hover .jeu-visuel h2{ rotate: -4deg; scale: 1.06; }
+.jeu-visuel--orange{ --fond-jeu: var(--orange); --titre-jeu: #fff; }
+.jeu-visuel--brun{   --fond-jeu: var(--brun);   --titre-jeu: var(--jaune-clair); }
+.jeu-visuel--jaune{  --fond-jeu: var(--jaune);  --titre-jeu: var(--brun); }
+.bubble__tag.badge--signe{ background: var(--orange); color: var(--creme); }
+.post-bubble__body .bubble__tag{ align-self:flex-start; margin-bottom: 12px; }
+
+/* Fiche d'un jeu */
+.fiche-jeu__visuel .jeu-visuel{ clip-path: var(--forme-carte); }
+.jeu-visuel--grand{ height: clamp(220px, 32vw, 340px); }
+.jeu-visuel--grand h1{ font-size: clamp(58px, 10vw, 120px); }
+.fiche-jeu__corps{
+  display:grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  gap: 40px;
+  margin-top: 36px;
+  align-items:start;
+}
+.fiche-jeu__texte .bubble__tag{ margin-bottom: 16px; }
+.fiche-jeu__infos{ background:#FFFBF2; border-radius:14px; padding: 18px 20px; box-shadow: 0 8px 24px rgba(81,34,22,.10); }
+.fiche-jeu__infos .game-credits li{ grid-template-columns: 1fr; gap: 2px; }
+.fiche-jeu__infos .game-meta{ grid-template-columns: 1fr; }
+@media (max-width: 860px){
+  .fiche-jeu__corps{ grid-template-columns: 1fr; gap: 26px; }
+}

@@ -3,97 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>News — Big Budi Games</title>
-  <meta name="description" content="Actualités Big Budi Games : festivals, sourcing, FIJ Cannes 2026." />
-
-  <!-- IMPORTANT : chemin relatif (pas de /sites/...) -->
-  <link rel="stylesheet" href="style.css?v=2026101001" />
-
-
+  <title>Tornadice — Big Budi Games</title>
+  <meta name="description" content="Tornadice, jeu de société de Sylvain Bonnafous, signé chez Big Budi Games le 24 juillet 2026." />
+  <link rel="stylesheet" href="../style.css?v=2026101001" />
 </head>
-
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="index.html" aria-label="Big Budi Games - Accueil">
-        <img class="brand__logo" src="assets/logo.png" alt="Big Budi Games" />
+      <a class="brand" href="../index.html" aria-label="Big Budi Games - Accueil">
+        <img class="brand__logo" src="../assets/logo.png" alt="Big Budi Games" />
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav">
-        <a href="index.html">Accueil</a>
-        <a href="jeux.html">Jeux</a>
-        <a class="active" href="blog.html">News</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="sourcing.html">Sourcing</a>
-        <a class="btn" href="contact.html">Contact</a>
+        <a href="../index.html">Accueil</a>
+        <a class="active" href="../jeux.html">Jeux</a>
+        <a href="../blog.html">News</a>
+        <a href="../a-propos.html">À propos</a>
+        <a href="../sourcing.html">Sourcing</a>
+        <a class="btn" href="../contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="page">
+  <main class="page fiche-jeu">
     <div class="container">
-      <p class="kicker">Actualités</p>
-      <h1>Les news Big Budi Games</h1>
-      <p class="lead">
-        D’autres articles sont en cours de rédaction !
-      </p>
+      <a class="back-link" href="../jeux.html">← Tous les jeux</a>
 
-      <section class="blog-grid" aria-label="Liste des articles">
+      <div class="vignette fiche-jeu__visuel">
+        <div class="jeu-visuel jeu-visuel--brun jeu-visuel--grand"><h1>TORNADICE</h1></div>
+      </div>
 
-        <!-- 1) 2 signatures de jeu -->
-        <div class="vignette">
-        <article class="post-bubble post-bubble--published">
-          <a class="post-bubble__link" href="blog/signatures-camino-tornadice.html" aria-label="2 signatures de jeu : Camino et Tornadice">
-            <div class="post-bubble__media">
-              <img
-                src="assets/blog/signatures-vignette.jpg"
-                alt="Signature des contrats d'édition Camino et Tornadice"
-                onerror="this.closest('.post-bubble__media').classList.add('is-missing'); this.style.display='none';"
-              >
-            </div>
-            <div class="post-bubble__body">
-              <div class="bubble__tag">Édition</div>
-              <h2>2 signatures de jeu !</h2>
-              <p>Camino et Tornadice rejoignent le catalogue Big Budi Games.</p>
-              <div class="post-bubble__foot">
-                <span class="news-date">23 et 24 juillet 2026</span>
-                <span class="post-bubble__meta post-bubble__meta--lire">À lire →</span>
-              </div>
-            </div>
-          </a>
-        </article>
+      <div class="fiche-jeu__corps">
+        <div class="fiche-jeu__texte">
+          <span class="bubble__tag badge--signe">Signé</span>
+          <p class="lead">Le contrat d&rsquo;édition de <strong>Tornadice</strong> a été signé le 24 juillet 2026.</p>
+          <p>La présentation détaillée du jeu arrive une fois le travail graphique engagé.</p>
         </div>
 
-        <!-- 2) FIJ 2026 -->
-        <div class="vignette">
-        <article class="post-bubble post-bubble--published">
-          <a class="post-bubble__link" href="blog/fij26.html" aria-label="FIJ Cannes 2026">
-            <div class="post-bubble__media">
-              <img
-                src="assets/fij.jpg"
-                alt="FIJ Cannes 2026"
-                onerror="this.closest('.post-bubble__media').classList.add('is-missing'); this.style.display='none';"
-              >
-            </div>
-            <div class="post-bubble__body">
-              <div class="bubble__tag">FIJ 2026</div>
-              <h2>FIJ Cannes 2026</h2>
-              <p>Objectifs, préparation et rencontres prévues sur place.</p>
-              <div class="post-bubble__foot">
-                <span class="news-date">25 février – 1er mars 2026</span>
-                <span class="post-bubble__meta post-bubble__meta--lire">À lire →</span>
-              </div>
-            </div>
-          </a>
-        </article>
-        </div>
+        <aside class="fiche-jeu__infos" aria-label="Fiche technique">
+          <ul class="game-credits">
+            <li><span>Auteur.ice.s</span><strong>Sylvain Bonnafous</strong></li>
+            <li><span>Illustration</span><strong>Annonce prochaine</strong></li>
+          </ul>
+          <div class="game-meta">
+            <div class="meta-item"><span>Statut</span><strong>Sous contrat</strong></div>
+            <div class="meta-item"><span>Signature</span><strong>24 juillet 2026</strong></div>
+            <div class="meta-item"><span>Disponibilité</span><strong>À venir</strong></div>
+          </div>
+        </aside>
+      </div>
 
+      <section class="simple-panel">
+        <h2>L&rsquo;annonce</h2>
+        <p>Les coulisses de la signature, photos à l&rsquo;appui, sont racontées dans les news.</p>
+        <div class="cta"><a class="btn" href="../blog/signatures-camino-tornadice.html">Lire l&rsquo;annonce →</a></div>
+      </section>
+
+      <section class="simple-panel">
+        <h2>Les autres jeux</h2>
+        <div class="cta">
+          <a class="btn btn--ghost" href="edit.html">EDIT</a>
+          <a class="btn btn--ghost" href="camino.html">CAMINO</a>
+        </div>
       </section>
     </div>
   </main>
+
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -110,15 +87,12 @@
       </a>
     </div>
       <span class="footer__links">
-        <a href="contact.html">Contact</a>
-        <a href="sourcing.html">Sourcing</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../sourcing.html">Sourcing</a>
       </span>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script>
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.nav');

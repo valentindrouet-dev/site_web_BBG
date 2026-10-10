@@ -28,8 +28,8 @@ de ressortir celle qu'ils gardaient en mémoire.
 l'ancienne mise en forme : images à leur taille d'origine, mise en page
 disloquée. C'est arrivé le 9 octobre 2026.
 
-À chaque modification de `style.css`, le numéro doit être relevé dans les
-huit pages. Sinon, le symptôme revient — et Ctrl+F5 ne soigne que le
+À chaque modification de `style.css`, le numéro doit être relevé dans
+toutes les pages (onze à ce jour, fiches de jeux comprises). Sinon, le symptôme revient — et Ctrl+F5 ne soigne que le
 poste depuis lequel on regarde, pas celui des visiteurs.
 
 ## La charte graphique dans la feuille de style
@@ -55,7 +55,8 @@ Un fichier ici = le même fichier là-bas, au même endroit.
 
 ```
 index.html          page d'accueil
-jeux.html           les jeux
+jeux.html           les jeux, en vignettes
+jeu/                une page par jeu (edit, tornadice, camino)
 catalogue.html      redirige vers jeux.html
 boutique.html       redirige vers jeux.html
 blog.html + blog/   le blog et ses articles

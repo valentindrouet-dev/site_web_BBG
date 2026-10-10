@@ -3,6 +3,9 @@
 
   <url><loc>https://bigbudigames.fr/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://bigbudigames.fr/jeux.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://bigbudigames.fr/jeu/edit.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://bigbudigames.fr/jeu/tornadice.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://bigbudigames.fr/jeu/camino.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://bigbudigames.fr/blog.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://bigbudigames.fr/a-propos.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://bigbudigames.fr/sourcing.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
