@@ -145,6 +145,7 @@ h3{ font-size: clamp(20px, 2.6vw, 24px); }
 /* ---------- Barre de navigation (ordinateur) ---------- */
 .topbar{ position: static; background: none; border: 0; }
 .topbar__inner{ display:flex; align-items:center; justify-content:flex-end; min-height:60px; }
+@media (min-width: 769px){ .topbar__inner{ justify-content:center; } }
 .brand{ display:none; }
 .nav{ display:flex; align-items:center; gap: 6px; flex-wrap:wrap; }
 .nav a{
@@ -471,15 +472,17 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 @media (min-width: 1100px){
   .accueil{
     display:grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    /* 2/3 – 1/3, mais les actualités ne descendent jamais sous 500 px (leur
+       largeur d'avant) : la zone s'élargit à 1600 px pour laisser grandir le texte */
+    grid-template-columns: minmax(0, 2fr) minmax(500px, 1fr);
     grid-template-rows: auto 1fr;
     column-gap: 48px;
-    max-width: var(--max);
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
     align-items: start;
   }
-  .accueil .hero{ grid-column:1; grid-row:1; overflow:visible; text-align:left; padding: 6px 0 8px; }
+  .accueil .hero{ grid-column:1; grid-row:1; overflow:visible; text-align:center; padding: 6px 0 8px; }
   .accueil .reseaux{ grid-column:1; grid-row:2; }
   .accueil .actus{
     grid-column:2; grid-row: 1 / span 2;
@@ -494,18 +497,18 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .accueil .bubble__media--tall img{ height: 190px; }
 
   .accueil .hero__texte{ max-width:none; padding:0; margin:0; }
-  .accueil .hero__logo{ margin: 0 0 14px; }
-  .accueil .hero__lead{ margin: 0 0 24px; max-width: 34em; }
-  .accueil .hero__cta{ align-items:flex-start; }
-  .accueil .hero__cta-rang{ justify-content:flex-start; }
-  .accueil .slogan{ font-size: clamp(44px, 4.2vw, 62px); margin: 26px 0 28px; }
-  /* chaque ligne pivote depuis la marge gauche : les trois restent alignées sur la colonne */
-  .accueil .slogan__l{ width:fit-content; transform-origin:left center; }
-  .accueil .slogan .slogan__band{ margin: .24em 0 .28em -.12em; }
+  .accueil .hero__logo{ width: clamp(330px, 26vw, 400px); margin: 0 auto 14px; }
+  .accueil .hero__lead{ margin: 0 auto 24px; max-width: 36em; font-size: 19px; }
+  .accueil .hero__cta{ align-items:center; }
+  .accueil .hero__cta-rang{ justify-content:center; }
+  .accueil .slogan{ font-size: clamp(46px, 4.6vw, 78px); margin: 28px 0 32px; }
+  /* chaque ligne pivote sur son centre : les trois restent alignées sur l'axe de la colonne */
+  .accueil .slogan__l{ width:fit-content; margin-inline:auto; transform-origin:center; }
+  .accueil .slogan .slogan__band{ margin: .24em auto .28em; }
 
-  .accueil .reseaux .social{ text-align:left; margin-top: 8px; padding-top: 28px; }
-  .accueil .reseaux .social__text{ margin-left:0; }
-  .accueil .reseaux .social__links{ justify-content:flex-start; }
+  .accueil .reseaux .social{ text-align:center; margin-top: 8px; padding-top: 28px; }
+  .accueil .reseaux .social__text{ margin-inline:auto; }
+  .accueil .reseaux .social__links{ justify-content:center; }
 }
 
 
