@@ -497,7 +497,8 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .accueil .bubble__media--tall img{ height: 190px; }
 
   .accueil .hero__texte{ max-width:none; padding:0; margin:0; }
-  .accueil .hero__logo{ width: clamp(330px, 26vw, 400px); margin: 0 auto 14px; }
+  /* le logo se cale à gauche de la colonne ; slogan, texte et boutons restent centrés */
+  .accueil .hero__logo{ width: clamp(330px, 26vw, 400px); margin: 0 0 14px; }
   .accueil .hero__lead{ margin: 0 auto 24px; max-width: 36em; font-size: 19px; }
   .accueil .hero__cta{ align-items:center; }
   .accueil .hero__cta-rang{ justify-content:center; }
