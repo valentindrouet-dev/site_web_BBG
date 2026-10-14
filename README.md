@@ -46,6 +46,14 @@ motif de fond.
 
 Polices : Lilita One pour tout ce qui est en capitales, Baloo 2 pour le texte.
 Servies par le site depuis `assets/fonts/`, sans appel à Google.
+Elles sont préchargées en tête de chaque page et réglées pour ne jamais
+afficher de police de remplacement : le texte attend une fraction de seconde,
+puis apparaît directement dans la bonne police.
+
+Texte penché et net : ne jamais mettre de `filter` (ombre portée…) ni de
+découpe `clip-path` sur un élément incliné qui contient du texte. Le
+navigateur peindrait le texte en image avant de la pivoter : il floute.
+Ombres et formes vont sur un calque à part (`::before`), derrière le texte.
 
 ## Où sont les fichiers
 

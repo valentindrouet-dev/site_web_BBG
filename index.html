@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Big Budi Games — Édition de jeux de société</title>
   <meta name="description" content="Big Budi Games, maison d’édition de jeux de société. Sourcing ouvert : proto@bigbudigames.fr" />
-  <link rel="stylesheet" href="style.css?v=2026101402" />
+  <link rel="preload" href="assets/fonts/LilitaOne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Medium.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css?v=2026101403" />
   <script>if ('IntersectionObserver' in window) document.documentElement.classList.add('js-reveal');</script>
 </head>
 
@@ -184,7 +188,13 @@
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entrees) {
         entrees.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          el.classList.add('is-visible'); io.unobserve(el);
+          // Une fois apparu, l'élément perd ses classes d'animation : le navigateur ne le
+          // traite plus comme un calque animé, et le texte penché redevient net.
+          // (Minuteur plutôt que transitionend : la transition ne part pas toujours.)
+          setTimeout(function () { el.classList.remove('reveal', 'is-visible'); }, 1500);
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
