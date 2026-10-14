@@ -9,7 +9,7 @@
   <link rel="preload" href="../assets/fonts/Baloo2-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/Baloo2-Medium.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../assets/fonts/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="../style.css?v=2026101403" />
+  <link rel="stylesheet" href="../style.css?v=2026101404" />
 </head>
 <body>
   <header class="topbar">
@@ -65,6 +65,41 @@
         <div class="cta"><a class="btn" href="../blog/signatures-camino-tornadice.html">Lire l&rsquo;annonce →</a></div>
       </section>
 
+      <section class="newsletter newsletter--large" aria-label="Inscription à la newsletter">
+      <div class="newsletter__intro">
+        <p class="newsletter__kicker">Newsletter</p>
+        <h2 class="newsletter__titre">Soyez prévenus de l&rsquo;annonce officielle</h2>
+        <p class="newsletter__texte">Nom définitif, illustrations, date de sortie&nbsp;: inscrivez-vous à la newsletter pour l&rsquo;apprendre en premier.</p>
+      </div>
+      <form method="post" action="https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/26387/submit" class="inf-form">
+        <input type="text" name="inf_email_check" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none" />
+        <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" />
+        <input type="hidden" name="key" value="eyJpdiI6IjFic2FzdFV4YzVDMTYzXC9qZ0ZqdHlmTmZ2XC9DblwvY2taZ2lDbXpiUUhOeEE9IiwibWFjIjoiNTg3NmU0MTlhMzQ5ZGI3OGJhYjVkZjgyOWIzNjYzOGEzMGI5YzEyOTUzZTZmNDdhY2ZlYWRjNzY0MjBmM2UwYSIsInZhbHVlIjoieUFweTNuWStQUkw3TFpVTWpDR2JFXC9mRitFYXF2dSt3UjhpeG5DeUt0Vjg9In0=">
+        <input type="hidden" name="webform_id" value="26387">
+        <div class="inf-main_4b0c6b58fb9b42eaace2cb27c73343db">
+          <h4>Big Budi Games - La Newsletter</h4>
+          <span>Nos jeux, nos festivals, nos coulisses et bons plans : recevez nos nouvelles directement dans votre boîte mail.</span>
+          <div class="inf-success" style="display:none">
+            <h4>Merci&nbsp;! Un email de confirmation vient de partir&nbsp;: cliquez sur le lien qu&rsquo;il contient pour valider votre inscription.</h4>
+            <p><a href="#" class="inf-btn">&laquo;</a></p>
+          </div>
+          <div class="inf-content">
+            <div class="inf-input inf-input-text">
+              <input type="email" name="inf[1]" data-inf-meta="1" data-inf-error="Merci d'indiquer une adresse email valide." required="required" placeholder="Votre adresse email" aria-label="Votre adresse email" autocomplete="email">
+            </div>
+            <div class="inf-rgpd">Votre adresse sert uniquement à vous envoyer la lettre Big Budi Games. Elle n&rsquo;est jamais revendue ni partagée.<br>Désinscription en un clic, via le lien présent dans chaque email.</div>
+            <script src="https://newsletter.infomaniak.com/v3/static/mcaptcha/altcha.min.js?v=1791982800" type="module"></script>
+            <altcha-widget hidelogo hidefooter floating challengeurl="https://newsletter.infomaniak.com/v3/altcha-challenge"></altcha-widget>
+            <script src="https://newsletter.infomaniak.com/v3/static/mcaptcha/altcha-index.js?v=1791982800" defer></script>
+            <script src="https://newsletter.infomaniak.com/v3/static/webform_index.js?v=1791982800"></script>
+            <div class="inf-submit">
+              <input type="submit" value="Je m'inscris">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
       <section class="simple-panel">
         <h2>Les autres jeux</h2>
         <div class="cta">
@@ -93,6 +128,7 @@
       <span class="footer__links">
         <a href="../contact.html">Contact</a>
         <a href="../sourcing.html">Sourcing</a>
+      <a href="../newsletter.html">Newsletter</a>
       </span>
     </div>
   </footer>

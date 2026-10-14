@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plus qu’une étape — Big Budi Games</title>
+  <meta name="description" content="Inscription à la newsletter Big Budi Games : confirmez votre adresse email." />
+  <meta name="robots" content="noindex" />
+  <link rel="preload" href="assets/fonts/LilitaOne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Medium.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Baloo2-Bold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css?v=2026101404" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html" aria-label="Big Budi Games - Accueil">
+      <img class="brand__logo" src="assets/logo.png" alt="Big Budi Games" />
+    </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="jeux.html">Jeux</a>
+      <a href="blog.html">News</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a class="btn" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <p class="kicker">Newsletter</p>
+    <h1>Plus qu&rsquo;une étape&nbsp;!</h1>
+    <p class="lead">Merci&nbsp;! Un email de confirmation vient de partir vers votre boîte.</p>
+    <div class="card nl-etape">
+      <img class="nl-etape__budi" src="assets/budiright.png" alt="" width="120" height="120" />
+      <div>
+        <p>Ouvrez-le et cliquez sur <strong>« Je confirme mon inscription »</strong>&nbsp;: c&rsquo;est ce clic qui valide votre inscription.</p>
+        <p class="micro">Pas reçu d&rsquo;ici quelques minutes&nbsp;? Jetez un œil dans vos spams ou courriers indésirables. L&rsquo;email arrive de la part de «&nbsp;Big Budi Games (Valentin Drouet)&nbsp;».</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="index.html">Retour à l&rsquo;accueil</a>
+      <a class="btn btn--ghost" href="jeux.html">Découvrir nos jeux</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Big Budi Games</span>
+    <span class="footer__links">
+      <a href="contact.html">Contact</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a href="newsletter.html">Newsletter</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        var open = nav.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+  </script>
+</body>
+</html>

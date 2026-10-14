@@ -70,6 +70,9 @@ boutique.html       redirige vers jeux.html
 blog.html + blog/   le blog et ses articles
 a-propos.html       à propos
 contact.html        contact
+newsletter.html     inscription à la newsletter (page à partager)
+newsletter-merci.html, newsletter-bienvenue.html
+                    étapes après l'inscription (redirections Infomaniak)
 sourcing.html       sourcing
 style.css           toute la mise en forme du site
 assets/             images et fichiers joints
@@ -79,6 +82,20 @@ sitemap.xml         plan du site pour les moteurs de recherche
 
 Chaque modification est conservée dans l'historique : on peut revenir à
 n'importe quelle version antérieure du site, à tout moment.
+
+## Newsletter
+
+- **Outil** : Infomaniak Newsletter (Manager → Events & Marketing → Newsletter),
+  groupe « Abonnés BBG », formulaire « Inscription Site Web » (n° 26387).
+- **Où est le formulaire** : accueil (bandeau sous la grille, ancre `#newsletter`),
+  page News, les trois fiches de jeux et `newsletter.html`, la page à partager
+  (réseaux, festivals, QR code) : `bigbudigames.fr/newsletter.html`.
+- **Redirections réglées chez Infomaniak** : `newsletter-merci.html` après
+  l'envoi du formulaire, `newsletter-bienvenue.html` après le clic dans l'email
+  de confirmation. Ne pas renommer ces deux fichiers.
+- **Si le formulaire est modifié chez Infomaniak**, son code d'intégration
+  change : recopier l'onglet HTML (clé, champs cachés, scripts) dans les six
+  pages, en gardant l'habillage du site (le bloc `<style>` fourni n'est pas repris).
 
 ## Comparer l'aperçu et le site en ligne
 
