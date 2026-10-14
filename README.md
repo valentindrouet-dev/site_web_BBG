@@ -97,6 +97,13 @@ n'importe quelle version antérieure du site, à tout moment.
 - **Si le formulaire est modifié chez Infomaniak**, son code d'intégration
   change : recopier l'onglet HTML (clé, champs cachés, scripts) dans les sept
   pages, en gardant l'habillage du site (le bloc `<style>` fourni n'est pas repris).
+- **Le petit script placé juste après chaque formulaire est indispensable.**
+  Quand un visiteur choisit son adresse dans la liste proposée par le
+  navigateur, celui-ci remplit aussi les champs pièges cachés
+  (`inf_email_check`, `website`) ; Infomaniak prend alors l'inscription pour
+  un robot et l'écarte en silence, tout en affichant « Merci ! ». Le script
+  vide ces champs à chaque saisie et avant l'envoi. À remettre si le code
+  d'intégration est recopié.
 
 ## Comparer l'aperçu et le site en ligne
 

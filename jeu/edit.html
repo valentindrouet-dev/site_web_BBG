@@ -92,6 +92,20 @@
           </div>
         </div>
       </form>
+      <script>
+        // Choisir son adresse dans la liste proposée par le navigateur remplit aussi les
+        // champs pièges cachés du formulaire Infomaniak : l'inscription passe alors pour
+        // un robot et elle est écartée sans un mot, malgré le « Merci ! ». On les vide à
+        // chaque saisie et juste avant l'envoi ; l'anti-robot ALTCHA, lui, reste en place.
+        (function () {
+          var form = document.currentScript.previousElementSibling;
+          if (!form || !form.classList.contains('inf-form')) return;
+          var pieges = form.querySelectorAll('input[name="inf_email_check"], input[name="website"]');
+          function vider() { for (var i = 0; i < pieges.length; i++) pieges[i].value = ''; }
+          ['input', 'change', 'click', 'submit'].forEach(function (type) { form.addEventListener(type, vider, true); });
+          document.addEventListener('submit', function (e) { if (e.target === form) vider(); }, true);
+        })();
+      </script>
     </section>
 
       <section class="simple-panel">
