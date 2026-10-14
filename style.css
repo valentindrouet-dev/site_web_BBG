@@ -587,3 +587,40 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   color: var(--orange);
   margin-right: 4px;
 }
+
+/* ===========================================================================
+   À propos : nos collaborateurs, une vignette par personne.
+   Même carte que les jeux ; en attendant les photos, les initiales en grand,
+   inclinées comme les titres. Deux colonnes sur téléphone pour garder la
+   liste courte.
+   =========================================================================== */
+.equipe{ margin-top: 54px; }
+.equipe h2{ margin-bottom: 6px; }
+.equipe-grille{ margin-top: 26px; }
+.equipe__visuel{ height: 150px; }
+.equipe__visuel span{
+  font-family: var(--titre);
+  font-size: clamp(48px, 5vw, 62px);
+  line-height: 1;
+  rotate: -7deg;
+  text-shadow: 0 4px 0 rgba(55,22,13,.22);
+  transition: rotate .25s ease, scale .25s ease;
+}
+.equipe__visuel--budi img{ width: 128px; height: 128px; rotate: -6deg; filter: drop-shadow(0 6px 0 rgba(55,22,13,.18)); }
+.post-bubble__link:hover .equipe__visuel span{ rotate: -4deg; scale: 1.08; }
+.equipe .post-bubble__body h3{ font-size: 22px; margin: 0 0 4px; }
+.equipe .post-bubble__body p{ margin: 0 0 14px; font-weight: 600; }
+.equipe .post-bubble__meta--lire{ align-self:flex-start; margin-top:auto; }
+@media (max-width: 920px){
+  .equipe-grille{ grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px 14px; }
+  .equipe__visuel{ height: 112px; }
+  .equipe__visuel span{ font-size: 42px; }
+  .equipe__visuel--budi img{ width: 96px; height: 96px; }
+  .equipe .post-bubble__body{ padding: 14px 14px 16px; }
+  .equipe .post-bubble__body h3{ font-size: 18px; }
+  .equipe .post-bubble__body p{ font-size: 14px; margin-bottom: 12px; }
+  .equipe .bubble__tag, .equipe .post-bubble__meta--lire{ font-size: 11px; padding: 5px 10px 6px; }
+  /* la dernière vignette, seule sur sa ligne, se centre */
+  .equipe-grille .vignette:last-child:nth-child(odd){ grid-column: 1 / -1; justify-self:center; width: calc(50% - 7px); }
+}
+@media (max-width: 340px){ .equipe-grille{ grid-template-columns: 1fr; } }
