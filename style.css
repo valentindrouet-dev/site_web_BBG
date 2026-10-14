@@ -475,17 +475,22 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
     /* 2/3 – 1/3, mais les actualités ne descendent jamais sous 500 px (leur
        largeur d'avant) : la zone s'élargit à 1600 px pour laisser grandir le texte */
     grid-template-columns: minmax(0, 2fr) minmax(500px, 1fr);
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr auto;
     column-gap: 48px;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
     align-items: start;
   }
-  .accueil .hero{ grid-column:1; grid-row:1; overflow:visible; text-align:center; padding: 6px 0 8px; }
-  .accueil .reseaux{ grid-column:1; grid-row:2; }
+  /* Le hero occupe toute la hauteur laissée libre par les actualités ; l'accroche
+     et les boutons descendent au bas de cet espace (margin-top:auto), juste
+     au-dessus des réseaux, dont le bas tombe ainsi sur celui du cadre jaune. */
+  .accueil .hero{ grid-column:1; grid-row:1; align-self:stretch; display:flex; flex-direction:column; overflow:visible; text-align:center; padding: 6px 0 8px; }
+  .accueil .hero__texte{ flex:1; display:flex; flex-direction:column; }
+  .accueil .reseaux{ grid-column:1; grid-row:2; padding-bottom:0; }
   .accueil .actus{
     grid-column:2; grid-row: 1 / span 2;
+    align-self: stretch;
     margin-top: 18px;
     padding: 30px 30px 36px;
     clip-path: polygon(3% 0%, 100% .8%, 98.4% 100%, 0% 99%);
@@ -499,10 +504,11 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .accueil .hero__texte{ max-width:none; padding:0; margin:0; }
   /* le logo se cale à gauche de la colonne ; slogan, texte et boutons restent centrés */
   .accueil .hero__logo{ width: clamp(330px, 26vw, 400px); margin: 0 0 14px; }
-  .accueil .hero__lead{ margin: 0 auto 24px; max-width: 36em; font-size: 19px; }
+  .accueil .hero__lead{ margin: auto auto 24px; max-width: 36em; font-size: 19px; }
   .accueil .hero__cta{ align-items:center; }
   .accueil .hero__cta-rang{ justify-content:center; }
-  .accueil .slogan{ font-size: clamp(46px, 4.6vw, 78px); margin: 28px 0 32px; }
+  /* l'espace libre se partage : moitié au-dessus du slogan, moitié au-dessus de l'accroche */
+  .accueil .slogan{ font-size: clamp(46px, 4.6vw, 78px); margin: auto 0 32px; padding-top: 28px; }
   /* chaque ligne pivote sur son centre : les trois restent alignées sur l'axe de la colonne */
   .accueil .slogan__l{ width:fit-content; margin-inline:auto; transform-origin:center; }
   .accueil .slogan .slogan__band{ margin: .24em auto .28em; }
