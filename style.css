@@ -109,6 +109,9 @@ h3{ font-size: clamp(20px, 2.6vw, 24px); }
 .btn:focus-visible{ outline:0; background: var(--brun); }
 .btn--ghost{ background: var(--jaune); color: var(--brun); }
 .btn--ghost:hover{ background: var(--jaune-clair); color: var(--brun); }
+/* bouton brun : celui de la newsletter, en écho à son bandeau */
+.btn--brun{ background: var(--brun); color: var(--jaune-clair); }
+.btn--brun:hover{ background: var(--brun-fonce); color: var(--jaune-clair); }
 .btn--creme{ background: var(--creme); color: var(--rouge); }
 .btn--creme:hover{ background:#fff; color: var(--rouge); }
 
