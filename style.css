@@ -548,8 +548,10 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .accueil .hero__lead{ margin: auto auto 24px; max-width: 36em; font-size: 19px; }
   .accueil .hero__cta{ align-items:center; }
   .accueil .hero__cta-rang{ justify-content:center; }
-  /* l'espace libre se partage : moitié au-dessus du slogan, moitié au-dessus de l'accroche */
-  .accueil .slogan{ font-size: clamp(46px, 4.6vw, 78px); margin: auto 0 32px; padding-top: 28px; }
+  /* l'espace libre se partage en trois : au-dessus du slogan, au-dessus de l'accroche,
+     et sous les boutons (avant « Réseaux sociaux ») ; le bas reste aligné sur le cadre jaune */
+  .accueil .slogan{ font-size: clamp(46px, 4.6vw, 78px); margin: auto 0 24px; padding-top: 16px; }
+  .accueil .hero__cta{ margin-bottom: auto; }
   /* chaque ligne pivote sur son centre : les trois restent alignées sur l'axe de la colonne */
   .accueil .slogan__l{ width:fit-content; margin-inline:auto; transform-origin:center; }
   .accueil .slogan .slogan__band{ margin: .24em auto .28em; }
