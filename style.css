@@ -271,7 +271,8 @@ h3{ font-size: clamp(20px, 2.6vw, 24px); }
 .actus__titre{ margin: 0 0 22px; }
 .actus__grille{ display:grid; gap: 22px; grid-template-columns: 1fr; }
 @media (min-width: 680px){ .actus__grille{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
-@media (min-width: 980px){ .actus__grille{ grid-template-columns: repeat(3, minmax(0,1fr)); gap: 26px; } }
+/* la newsletter, 3e élément, prend toute la largeur quand la grille a deux colonnes */
+.actus__grille > .newsletter{ grid-column: 1 / -1; margin:0; }
 
 .bubble{ padding:0; display:flex; flex-direction:column; }
 .bubble__wrap{ display:flex; flex-direction:column; flex:1; color:inherit; }
@@ -515,8 +516,23 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
     align-self: stretch;
     margin-top: 18px;
     padding: 30px 30px 36px;
+    position: relative;
+    z-index: 0;
+    background: none;
+  }
+  /* le panneau de biais est un calque : son contenu (le formulaire) n'est pas découpé */
+  .accueil .actus::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    background: var(--jaune-clair) url('assets/charte/motif.webp') center / 460px repeat;
     clip-path: polygon(3% 0%, 100% .8%, 98.4% 100%, 0% 99%);
   }
+  /* dans la colonne des actualités, la newsletter s'empile (pas de deux colonnes) */
+  .accueil .actus .newsletter--large{ display:block; padding: 30px 26px 26px; }
+  .accueil .actus .newsletter__titre{ font-size: 32px; }
+  .accueil .actus .newsletter__texte{ margin-bottom: 18px; }
   .accueil .actus .container{ padding:0; max-width:none; }
   .accueil .actus__titre{ margin-bottom: 18px; }
   .accueil .actus__grille{ grid-template-columns: 1fr; gap: 22px; }
@@ -673,7 +689,8 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   clip-path: polygon(0% 3%, 100% 0%, 99.2% 100%, .6% 96.5%);
 }
 .newsletter__kicker{ margin:0 0 4px; font-family: var(--titre); font-size: 14px; letter-spacing:.1em; text-transform:uppercase; color: var(--jaune); }
-.newsletter__titre{ margin:0 0 8px; color: var(--jaune-clair); font-size: clamp(28px, 4vw, 40px); line-height:1.05; }
+/* « .newsletter » devant : passe avant « .section--jaune h2 » (titre brun) */
+.newsletter .newsletter__titre{ margin:0 0 8px; color: var(--jaune-clair); font-size: clamp(28px, 4vw, 40px); line-height:1.05; }
 .newsletter__texte{ margin: 0 0 20px; font-size: 17px; font-weight:500; max-width: 46ch; }
 .newsletter [class^="inf-main_"] > h4,
 .newsletter [class^="inf-main_"] > span{ display:none; }
@@ -716,9 +733,8 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   .newsletter .inf-rgpd{ grid-area: 3 / 1; }
   .newsletter altcha-widget{ grid-area: 4 / 1; }
 }
-/* Accueil : le bandeau sous la grille, à la largeur de celle-ci */
-.nl-accueil{ max-width: 1600px; margin: 10px auto 50px; padding: 0 20px; }
-.nl-accueil .newsletter{ margin: 0; }
+/* News : le bandeau sous les articles */
+.blog-grid + .newsletter{ margin-top: 48px; }
 
 /* Page Newsletter : ce que contient la lettre */
 .nl-programme__titre{ margin-top: 44px; }

@@ -87,8 +87,8 @@ n'importe quelle version antérieure du site, à tout moment.
 
 - **Outil** : Infomaniak Newsletter (Manager → Events & Marketing → Newsletter),
   groupe « Abonnés BBG », formulaire « Inscription Site Web » (n° 26387).
-- **Où est le formulaire** : accueil (bandeau sous la grille, ancre `#newsletter`),
-  page News, les trois fiches de jeux et `newsletter.html`, la page à partager
+- **Où est le formulaire** : accueil (3e bloc des Actualités, à la place du
+  Sourcing ; ancre `#newsletter`), page News (sous les articles), les trois fiches de jeux et `newsletter.html`, la page à partager
   (réseaux, festivals, QR code) : `bigbudigames.fr/newsletter.html`.
 - **Redirections réglées chez Infomaniak** : `newsletter-merci.html` après
   l'envoi du formulaire, `newsletter-bienvenue.html` après le clic dans l'email
