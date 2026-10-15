@@ -766,7 +766,7 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
    Les champs de saisie gardent 16 px réels à l'écran : en dessous, l'iPhone
    zoome tout seul dès qu'on touche le champ.
    =========================================================================== */
-:root{ --zoom-mobile: .8; }
+:root{ --zoom-mobile: .9; }
 @media (max-width: 768px){
   html{ zoom: var(--zoom-mobile); }
   input:not([type="submit"]):not([type="hidden"]), select, textarea{ font-size: calc(16px / var(--zoom-mobile)) !important; }
