@@ -88,6 +88,17 @@ sitemap.xml         plan du site pour les moteurs de recherche
 Chaque modification est conservée dans l'historique : on peut revenir à
 n'importe quelle version antérieure du site, à tout moment.
 
+## Icône d'onglet et aperçu de partage
+
+- **Icône (la tête de Budi)** : `favicon.ico` (onglets), `apple-touch-icon.png`
+  (écran d'accueil iPhone), `assets/icones/` + `site.webmanifest` (Android).
+- **Aperçu de partage** (WhatsApp, Facebook, LinkedIn…) : balises `og:` en tête
+  de chaque page. Titre = `<title>`, texte = `meta description`, image =
+  `assets/partage/bigbudigames.jpg` (1200 × 630). Les articles ont leur propre
+  image (`og:image`). Nouvelle page ou nouvel article : recopier ces balises.
+- WhatsApp et Facebook gardent un aperçu en mémoire : un lien déjà partagé peut
+  montrer l'ancien. Facebook se rafraîchit avec son « Débogueur de partage ».
+
 ## Newsletter
 
 - **Outil** : Infomaniak Newsletter (Manager → Events & Marketing → Newsletter),
