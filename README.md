@@ -96,6 +96,9 @@ n'importe quelle version antérieure du site, à tout moment.
   de chaque page. Titre = `<title>`, texte = `meta description`, image =
   `assets/partage/bigbudigames.jpg` (1200 × 630). Les articles ont leur propre
   image (`og:image`). Nouvelle page ou nouvel article : recopier ces balises.
+- **Changer l'icône** : remplacer les fichiers, puis relever le `?v=` des liens
+  `favicon.ico?v=…` et `apple-touch-icon.png?v=…` dans toutes les pages, sinon
+  les navigateurs gardent l'ancienne (ils la mémorisent très longtemps).
 - WhatsApp et Facebook gardent un aperçu en mémoire : un lien déjà partagé peut
   montrer l'ancien. Facebook se rafraîchit avec son « Débogueur de partage ».
 
