@@ -44,6 +44,10 @@ Le dossier `assets/charte/` contient les pictogrammes tirés de la charte
 (banane et pièce, bulle à chiffre, flèche, contours blancs) et la tuile du
 motif de fond.
 
+Sur téléphone, tout le site est affiché à 80 % (réglage unique `--zoom-mobile`,
+en fin de `style.css`) : un rendu un peu « dézoomé », préféré au 100 %. Les champs
+de saisie et le bouton menu gardent leur taille réelle à l'écran (16 px et 44 px).
+
 Polices : Lilita One pour tout ce qui est en capitales, Baloo 2 pour le texte.
 Servies par le site depuis `assets/fonts/`, sans appel à Google.
 Elles sont préchargées en tête de chaque page et réglées pour ne jamais
