@@ -773,3 +773,19 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
   /* le bouton menu garde 44 px réels, le minimum confortable sous le doigt */
   .nav-toggle{ width: calc(44px / var(--zoom-mobile)); height: calc(44px / var(--zoom-mobile)); }
 }
+
+/* ===========================================================================
+   Règlement du tirage au sort (page accessible par lien direct seulement) :
+   un texte long, des titres d'article sobres, le tableau des lots.
+   =========================================================================== */
+.reglement{ max-width: 860px; margin-top: 8px; padding: 26px 30px 24px; }
+.reglement h2{ margin: 28px 0 8px; padding-left: 12px; border-left: 5px solid var(--orange); font-size: 20px; line-height: 1.25; }
+.reglement h2:first-child{ margin-top: 0; }
+.reglement p, .reglement li{ font-size: 16px; }
+.reglement ol{ padding-left: 22px; }
+.reglement__tableau{ overflow-x: auto; margin: 10px 0 14px; }
+.reglement table{ width: 100%; border-collapse: collapse; font-size: 15px; background: #fff; }
+.reglement th, .reglement td{ padding: 9px 12px; text-align: left; border: 2px solid rgba(81,34,22,.18); }
+.reglement th{ background: var(--orange); color: var(--creme); font-family: var(--titre); font-weight: 400; letter-spacing: .03em; text-transform: uppercase; font-size: 14px; }
+.reglement__maj{ margin-top: 30px; font-size: 14px !important; color: var(--texte-doux); }
+@media (max-width: 560px){ .reglement{ padding: 22px 18px 20px; } }
