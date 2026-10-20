@@ -792,6 +792,8 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 
 /* Vignettes dont le visuel porte son titre en haut (affiches carrées) : on cadre le haut */
 .bubble__media img.media--haut, .post-bubble__media img.media--haut{ object-position: center top; }
-/* Article : un visuel entier, carré, sans recadrage */
-.article-visuel{ max-width: 560px; margin: 24px 0 8px; }
+/* Vignette dont le visuel doit rester entier (la carte des festivals) : sa hauteur naturelle */
+.bubble__media img.media--entier{ height:auto; aspect-ratio: 1600 / 993; }
+/* Article : un visuel entier, sans recadrage */
+.article-visuel{ max-width: 760px; margin: 24px 0 8px; }
 .article-visuel img{ display:block; width:100%; height:auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(81,34,22,.14); }
