@@ -792,6 +792,8 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 
 /* Vignettes dont le visuel porte son titre en haut (affiches carrées) : on cadre le haut */
 .bubble__media img.media--haut, .post-bubble__media img.media--haut{ object-position: center top; }
+/* Vignette du t-shirt Big Budi Games (JAL) : cadrée sur le logo, dans le bas de la photo */
+.bubble__media img.media--logo, .post-bubble__media img.media--logo{ object-position: center 85%; }
 /* Vignette dont le visuel doit rester entier (la carte des festivals) : sa hauteur naturelle */
 .bubble__media img.media--entier{ height:auto; aspect-ratio: 1600 / 993; }
 /* Article : un visuel entier, sans recadrage */
