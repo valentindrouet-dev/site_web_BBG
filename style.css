@@ -812,12 +812,15 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 .galerie{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 26px 0 18px; }
 .galerie figure{ margin: 0; }
 .galerie img{ display:block; width:100%; height: var(--haut-photo); object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(81,34,22,.12); }
+.article-visuel--photo{ max-width:none; }
 .article-visuel--photo img{ width:auto; max-width:100%; height: var(--haut-photo); object-fit: cover; }
 @media (max-width: 720px){
   .chiffres{ grid-template-columns: 1fr; gap: 10px; }
   .chiffres li{ display:flex; align-items:center; gap: 14px; }
   .chiffres strong{ margin:0; font-size: 36px; min-width: 2.6em; }
   :root{ --haut-photo: 240px; }
+  /* photo seule sur téléphone : en entier, sur toute la largeur (sinon le panoramique serait rogné) */
+  .article-visuel--photo img{ width:100%; height:auto; }
   .galerie{ grid-template-columns: 1fr; gap: 14px; }
   .duo.duo--entier{ grid-template-columns: 1fr 1fr; gap: 12px; }
 }
