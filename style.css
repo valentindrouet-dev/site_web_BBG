@@ -792,8 +792,6 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 
 /* Vignettes dont le visuel porte son titre en haut (affiches carrées) : on cadre le haut */
 .bubble__media img.media--haut, .post-bubble__media img.media--haut{ object-position: center top; }
-/* Vignette du t-shirt Big Budi Games (JAL) : cadrée sur le logo, dans le bas de la photo */
-.bubble__media img.media--logo, .post-bubble__media img.media--logo{ object-position: center 85%; }
 /* Vignette dont le visuel doit rester entier (la carte des festivals) : sa hauteur naturelle */
 .bubble__media img.media--entier{ height:auto; aspect-ratio: 1600 / 993; }
 /* Article : un visuel entier, sans recadrage */
@@ -807,15 +805,20 @@ hr{ border:0; border-top: 2px solid rgba(81,34,22,.14) !important; margin: 24px 
 /* Article : deux visuels de même format, en entier */
 .duo.duo--entier{ max-width: 760px; }
 .duo.duo--entier img{ height:auto; aspect-ratio: 4 / 5; }   /* double classe : passe avant le style interne des articles */
-/* Article : une galerie de photos sur deux colonnes, chacune à son format */
-.galerie{ columns: 2; column-gap: 18px; margin: 26px 0 8px; }
-.galerie figure{ margin: 0 0 18px; break-inside: avoid; }
-.galerie img{ display:block; width:100%; height:auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(81,34,22,.12); }
+/* Article : photos de reportage, toutes à la même hauteur (--haut-photo).
+   Galerie sur deux colonnes, recadrée au besoin (object-position en ligne
+   pour garder l'essentiel) ; photo seule : sa largeur naturelle. */
+:root{ --haut-photo: 340px; }
+.galerie{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; margin: 26px 0 18px; }
+.galerie figure{ margin: 0; }
+.galerie img{ display:block; width:100%; height: var(--haut-photo); object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(81,34,22,.12); }
+.article-visuel--photo img{ width:auto; max-width:100%; height: var(--haut-photo); object-fit: cover; }
 @media (max-width: 720px){
   .chiffres{ grid-template-columns: 1fr; gap: 10px; }
   .chiffres li{ display:flex; align-items:center; gap: 14px; }
   .chiffres strong{ margin:0; font-size: 36px; min-width: 2.6em; }
-  .galerie{ columns: 1; }
+  :root{ --haut-photo: 240px; }
+  .galerie{ grid-template-columns: 1fr; gap: 14px; }
   .duo.duo--entier{ grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 
